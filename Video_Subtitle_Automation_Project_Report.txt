@@ -1,0 +1,35 @@
+
+Project Report: Video Subtitle Automation
+
+Overview
+The project focuses on developing a Python-based automation tool to convert video files into subtitled versions. This tool simplifies the process of generating subtitles for videos by converting video audio to text and embedding the text as subtitles.
+
+Implementation Steps
+
+1. MP4 to MP3 Conversion: The tool first converts an input MP4 video file into an MP3 audio file. This is crucial for isolating the audio component, which is necessary for transcription.
+
+2. Audio Transcription: The extracted MP3 file is then transcribed into text. The project utilizes OpenAI's Whisper model for accurate audio-to-text conversion. The transcription output is formatted as an SRT file, which is a standard format for video subtitles.
+
+3. Embedding Subtitles: The final step involves embedding the generated SRT subtitles into the original video. This is achieved using the FFmpeg library, a powerful multimedia processing tool.
+
+Technologies Used
+
+- Python: The core programming language for the tool.
+- MoviePy: A Python library for video editing, used for the MP4 to MP3 conversion.
+- OpenAI's Whisper Model: Leveraged for converting audio files into text transcriptions.
+- FFmpeg: Utilized for embedding the SRT files into the video as subtitles.
+
+Process Flow
+
+1. The tool reads the OpenAI API key from a file, essential for accessing the Whisper model.
+2. The user specifies the paths for the input video, the intermediate MP3 audio file, and the final video output.
+3. The tool executes the conversion and transcription processes, handling exceptions and providing feedback on the success or failure of each step.
+4. The final output is a video file with embedded subtitles, and the process concludes with a success message if all steps are completed without errors.
+
+Results
+
+The tool successfully converted an input video file into a subtitled version. The process involved extracting audio, transcribing it, and embedding the transcription as subtitles. The output confirmed the tool's effectiveness in automating the subtitle generation process, making it a valuable asset for video content creators.
+
+Conclusion
+
+This project represents a significant advancement in automating the subtitle creation process for videos. By integrating powerful tools like MoviePy, OpenAI's Whisper model, and FFmpeg, the tool streamlines the conversion, transcription, and embedding processes, making it easier to generate subtitled videos efficiently.
